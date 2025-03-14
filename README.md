@@ -55,6 +55,9 @@ if [ ! -f "$HOOK_PATH" ]; then
     # Navigate to the tracking repository
     cd path/to/your/tracker/repo
 
+    # Pull the latest changes to avoid conflicts
+    git pull origin main --rebase
+
     # Append commit data to a log file
     echo "\$COMMIT_DATE | \$REPO_NAME | \$CURRENT_BRANCH | \$COMMIT_HASH" >> commits.log
 
